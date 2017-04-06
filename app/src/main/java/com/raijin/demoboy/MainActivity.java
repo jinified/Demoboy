@@ -20,6 +20,9 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.illposed.osc.OSCPort;
+import com.illposed.osc.OSCPortOut;
+
 import org.puredata.android.io.AudioParameters;
 import org.puredata.android.io.PdAudio;
 import org.puredata.android.utils.PdUiDispatcher;
@@ -35,6 +38,11 @@ import static java.lang.Math.abs;
 
 public class MainActivity extends AppCompatActivity {
 
+    // OSC
+    final static String SERVER_IP = "192.168.1.149";
+    final static int OSC_PORT = 6448;
+    private OSCPortOut oscPortOut;
+
     final static String SENSOR_FORMAT = "%+.3f";
 
     // Pure Data
@@ -43,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     // Sensors
     WifiManager wifiManager;
     private BroadcastReceiver rssiReceiver;
+    private static final float MAX_ACC = 9.8F;
 
     private SensorManager sensorManager;
     private Sensor accelerometer;
@@ -211,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
                 acceleration[2] = event.values[2];
 
                 if (isBGMChecked) {
-                    float tempo = (float) (250 + 500*(acceleration[2] / 9.8));
+                    float tempo = 250 + 500*(normalize(acceleration[2]));
                     Log.i("tempo", String.valueOf(tempo));
                     PdBase.sendFloat("sequencerBeat", tempo);
                 }
@@ -307,6 +316,11 @@ public class MainActivity extends AppCompatActivity {
         sensorManager.registerListener(accListener, accelerometer, 100000);
     }
 
+    private float normalize(float in) {
+        // Normalize sensor value between -1 to 1
+        return in / MAX_ACC;
+    }
+
     private void loadPdPatch() throws IOException {
         File dir = getFilesDir();
         IoUtils.extractZipResource(getResources().openRawResource(R.raw.simplepatch), dir, true);
@@ -330,5 +344,13 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         PdAudio.stopAudio();
         this.unregisterReceiver(rssiReceiver);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Destroy instances of PD to prevent multiple instances which causes distortion
+        PdAudio.release();
+        PdBase.release();
     }
 }

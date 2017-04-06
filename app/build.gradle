@@ -26,6 +26,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'org.puredata.android:pd-core:1.0.2'
+    compile 'com.illposed.osc:javaosc-core:0.3'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:25.1.0'
 }

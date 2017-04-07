@@ -21,7 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="MusicBudak" />
 
         </android.support.design.widget.AppBarLayout>
 
@@ -47,18 +48,18 @@
                     android:layout_weight="0.70">
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/button_1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:text="1" />
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/button_2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:text="2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -68,18 +69,18 @@
                     android:layout_weight="0.77">
 
                     <Button
-                        android:id="@+id/button6"
+                        android:id="@+id/button_3"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:text="3" />
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/button_4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:text="4" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -88,26 +89,68 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button8"
+                        android:id="@+id/button_5"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:text="5" />
 
                     <Button
-                        android:id="@+id/button7"
+                        android:id="@+id/button_6"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:text="6" />
                 </LinearLayout>
             </LinearLayout>
 
-            <SeekBar
-                android:id="@+id/seekBar"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="126dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.22" />
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/button_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:text="C" />
+
+                <Button
+                    android:id="@+id/button_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:text="D" />
+
+                <Button
+                    android:id="@+id/button_e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.21"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:text="E" />
+
+                <Button
+                    android:id="@+id/button_f"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.18"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:text="F" />
+
+                <Button
+                    android:id="@+id/button_g"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.19"
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:text="G" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </RelativeLayout>

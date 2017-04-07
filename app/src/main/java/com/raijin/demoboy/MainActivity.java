@@ -32,6 +32,7 @@ import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.Math.abs;
@@ -221,13 +222,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if (isBGMChecked) {
                     float tempo = 250 + 500*(normalize(acceleration[2]));
-                    Log.i("tempo", String.valueOf(tempo));
                     PdBase.sendFloat("sequencerBeat", tempo);
                 }
 
                 if (isFMChecked) {
                     float modIndex = (float) (abs(acceleration[0]) / 9.8 * 5);
-                    Log.i("modIndex", String.valueOf(modIndex));
                     PdBase.sendFloat("fs", modIndex*440);
                 }
                 // Refactor this shit

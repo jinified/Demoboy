@@ -42,9 +42,18 @@ e
 
 # Synthesis parameters
 
-## FM Synthesis
-1. `modulation_ratio` = frequency ratio between carrier and modulator
-2. `modulation_index` = depth of modulation
+# Ring modulation synthesis [1]
+1. `rm_carrier_midinote` = midi note used for carrier [0-127]
+2. `rm_mod_midinote` = midi note used for modulator [0-127]
+
+# Amplitude modulation synthesis [2]
+1. `am_carrier_midinote` = midi note used for carrier [0-127]
+2. `am_mod_midinote` = midi note used for modulator [0-127]
+
+## Frequency modulation Synthesis [3]
+1. `fm_carrier_midinote` = midi note used for carrier [0-127]
+2. `fm_mod_midinote` = midi note used for modulator [0-127]
+2. `fm_modindex` = depth of modulation [10-150]
 
 ## Additive Synthesis
 1. `n_sines`  = number of sinusoids

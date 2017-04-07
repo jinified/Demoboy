@@ -1,0 +1,215 @@
+#N canvas 89 22 976 692 10;
+#X obj 479 56 notein;
+#X obj 454 214 t f f;
+#X obj 366 280 moses 45;
+#X obj 411 303 moses 60;
+#X msg 366 332 1;
+#X msg 411 332 2;
+#X msg 456 333 3;
+#X obj 511 413 pack f f f;
+#X obj 511 449 route 1 2 3;
+#X obj 404 523 poly 4 1;
+#X obj 470 105 poly 4 1;
+#X text 539 87 <-- this will make sure that the maximum number voices
+for the entire keyboard range is four. We don't need the voice number
+because that gets allocated with later [poly]s. We just need limits
+and voice-stealing. If you just want the individual key regions to
+have their own limit instead \, just get rid of this.;
+#X text 15 285 This labels each region. 1 == notes below 45 \, 2 ==
+notes greater than or equal to 45 and less than 60 \, and 3 == notes
+greater than or equal to 60;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 399 601 pd voice;
+#X obj 404 548 pack f f f;
+#X obj 404 573 route 1 2 3 4;
+#X text 542 635 45 <= note < 60;
+#X text 427 633 note < 45;
+#X text 678 636 60 <= note;
+#X text 117 522 a separate [poly] is used for each key region;
+#X text 896 610 .mmb;
+#X text 25 21 USING [poly] FOR MULTIPLE KEY REGIONS;
+#X text 23 33 -------------------------------------;
+#X text 22 50 This tutorial is meant to illustrate how to take advantage
+of [poly] when you have a keyboard setup with different instruments
+in different regions. Note that this is mainly useful when the instruments
+in the regions are actually different. If they are the same synth with
+different parameters (or samplers with different samples) \, it might
+be easier and more efficient to just change the parameters (or switch
+tables) within the voice itself.;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 426 601 pd voice;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 453 601 pd voice;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 480 601 pd voice;
+#X obj 534 523 poly 4 1;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 529 601 pd voice;
+#X obj 534 548 pack f f f;
+#X obj 534 573 route 1 2 3 4;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 556 601 pd voice;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 583 601 pd voice;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 610 601 pd voice;
+#X obj 664 523 poly 4 1;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 659 601 pd voice;
+#X obj 664 548 pack f f f;
+#X obj 664 573 route 1 2 3 4;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 686 601 pd voice;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 713 601 pd voice;
+#N canvas 0 22 450 300 voice 0;
+#X obj 148 67 inlet;
+#X obj 148 94 unpack f f;
+#X obj 205 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 205 139 != 0;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 25 25 2 200 200;
+#X restore 740 601 pd voice;
+#X connect 0 0 10 0;
+#X connect 0 1 10 1;
+#X connect 1 0 2 0;
+#X connect 1 1 7 1;
+#X connect 2 0 4 0;
+#X connect 2 1 3 0;
+#X connect 3 0 5 0;
+#X connect 3 1 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 27 0;
+#X connect 8 2 34 0;
+#X connect 9 0 14 0;
+#X connect 9 1 14 1;
+#X connect 9 2 14 2;
+#X connect 10 1 1 0;
+#X connect 10 2 7 2;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 15 1 24 0;
+#X connect 15 2 25 0;
+#X connect 15 3 26 0;
+#X connect 27 0 29 0;
+#X connect 27 1 29 1;
+#X connect 27 2 29 2;
+#X connect 29 0 30 0;
+#X connect 30 0 28 0;
+#X connect 30 1 31 0;
+#X connect 30 2 32 0;
+#X connect 30 3 33 0;
+#X connect 34 0 36 0;
+#X connect 34 1 36 1;
+#X connect 34 2 36 2;
+#X connect 36 0 37 0;
+#X connect 37 0 35 0;
+#X connect 37 1 38 0;
+#X connect 37 2 39 0;
+#X connect 37 3 40 0;

@@ -1,0 +1,33 @@
+#N canvas 662 155 627 492 10;
+#X obj 223 84 t b b b;
+#X msg 137 173 lala;
+#X obj 137 218 symbol;
+#X obj 178 261 pack s s s;
+#X msg 358 173 .wav;
+#X obj 317 216 l2s;
+#X obj 229 208 l2s;
+#X msg 235 174 file123;
+#X msg 178 304 set \$1/\$2\$3;
+#X obj 221 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 136 52 CLICK ME >>>;
+#X msg 178 351 lala/file123.wav;
+#X obj 77 345 print;
+#X msg 77 308 \$1/\$2\$3;
+#X text 270 301 You do not need set... just \$1\$2\$3 etc \; "set"
+allows you to see the message in the next box \; that is all... see
+the printout on the left!;
+#X connect 0 0 1 0;
+#X connect 0 1 7 0;
+#X connect 0 2 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 3 0 13 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 2;
+#X connect 6 0 3 1;
+#X connect 7 0 6 0;
+#X connect 8 0 11 0;
+#X connect 9 0 0 0;
+#X connect 13 0 12 0;

@@ -76,7 +76,7 @@
 #X connect 14 0 15 1;
 #X connect 15 0 0 1;
 #X connect 15 0 2 1;
-#X restore 433 412 pd stereopan;
+#X restore 433 369 pd stereopan;
 #N canvas 65 85 1301 687 controller 0;
 #X obj 123 362 s stereo_pan;
 #X obj 127 326 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
@@ -752,7 +752,7 @@ so the recirculation gain is limited to 0.5.;
 #X connect 7 0 4 0;
 #X connect 7 0 5 0;
 #X connect 7 0 6 0;
-#X restore 311 323 pd effect_patches;
+#X restore 421 306 pd effect_patches;
 #X text 30 242 Synthesis patches;
 #N canvas 65 53 1301 715 earplug 0;
 #X msg 442 207 0 \, 360 5000;
@@ -803,7 +803,7 @@ so the recirculation gain is limited to 0.5.;
 #X connect 4 0 2 0;
 #X connect 5 0 2 0;
 #X connect 6 0 5 0;
-#X restore 490 331 pd normal;
+#X restore 600 314 pd normal;
 #X text 870 537 Examples;
 #N canvas 65 53 1301 715 sending_list 0;
 #X msg 597 248 list mother 1 1 2;

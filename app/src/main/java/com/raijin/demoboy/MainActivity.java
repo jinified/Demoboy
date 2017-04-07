@@ -82,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    PdBase.sendFloat("startSequencer", 1);
+                    PdBase.sendFloat("start", 1);
                 } else {
-                    PdBase.sendFloat("startSequencer", 0);
+                    PdBase.sendFloat("start", 0);
                 }
                 isBGMChecked = isChecked;
             }
@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 switch(event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         isHoldBtn[0] = true;
+                        PdBase.sendFloat("note", 48);
                         return true;
                     case MotionEvent.ACTION_UP:
                         isHoldBtn[0] = false;
@@ -141,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 switch(event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         isHoldBtn[1] = true;
+                        PdBase.sendFloat("note", 52);
                         return true;
                     case MotionEvent.ACTION_UP:
                         isHoldBtn[1] = false;
@@ -158,10 +160,10 @@ public class MainActivity extends AppCompatActivity {
                 switch(event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         isHoldBtn[2] = true;
+                        PdBase.sendFloat("note", 55);
                         return true;
                     case MotionEvent.ACTION_UP:
                         isHoldBtn[2] = false;
-                        PdBase.sendFloat("holdBtn3", 0);
                         return true;
                 }
                 return false;
@@ -175,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 switch(event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         isHoldBtn[3] = true;
+                        PdBase.sendFloat("note", 59);
                         return true;
                     case MotionEvent.ACTION_UP:
                         isHoldBtn[3] = false;
@@ -232,23 +235,19 @@ public class MainActivity extends AppCompatActivity {
                 // Refactor this shit
 
                 if (isHoldBtn[3]) {
-                    float ampMultiplier = (float) (acceleration[1] / 9.8);
-                    PdBase.sendFloat("holdBtn4", ampMultiplier);
+                    PdBase.sendNoteOn(1, 59, 127);
                 }
 
                 if (isHoldBtn[2]) {
-                    float ampMultiplier = (float) (acceleration[1] / 9.8);
-                    PdBase.sendFloat("holdBtn3", ampMultiplier);
+                    PdBase.sendNoteOn(1, 55, 127);
                 }
 
                 if (isHoldBtn[1]) {
-                    float ampMultiplier = (float) (acceleration[1] / 9.8);
-                    PdBase.sendFloat("holdBtn2", ampMultiplier);
+                    PdBase.sendNoteOn(1, 52, 127);
                 }
 
                 if (isHoldBtn[0]) {
-                    float ampMultiplier = (float) (acceleration[1] / 9.8);
-                    PdBase.sendFloat("holdBtn1", ampMultiplier);
+                    PdBase.sendNoteOn(1, 48, 127);
                 }
 
                 final double alpha = 0.8;
@@ -308,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         IntentFilter rssiFilter = new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
-        this.registerReceiver(rssiReceiver, rssiFilter);
+        // this.registerReceiver(rssiReceiver, rssiFilter);
 
         // Set Motion Sensors
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -322,8 +321,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadPdPatch() throws IOException {
         File dir = getFilesDir();
-        IoUtils.extractZipResource(getResources().openRawResource(R.raw.simplepatch), dir, true);
-        File pdPatch = new File(dir, "simplepatch.pd");
+        IoUtils.extractZipResource(getResources().openRawResource(R.raw.main), dir, true);
+        File pdPatch = new File(dir, "main.pd");
         PdBase.openPatch(pdPatch);
     }
 

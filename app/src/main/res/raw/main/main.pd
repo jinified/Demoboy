@@ -15,42 +15,46 @@
 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array stereo_left 100 float 5;
-#A 0 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592;
+#A 0 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05;
 #X coords 0 1 100 -1 200 140 1;
 #X restore 806 51 graph;
 #X obj 438 621 tabwrite~ stereo_left;
 #X obj 604 622 tabwrite~ stereo_right;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array stereo_right 100 float 5;
-#A 0 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592 0.0506592
-0.0506592 0.0506592;
+#A 0 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05
+1.52588e-05 1.52588e-05 1.52588e-05 1.52588e-05;
 #X coords 0 1 100 -1 200 140 1;
 #X restore 1045 50 graph;
 #X obj 445 41 r volume;
@@ -72,8 +76,8 @@
 #X connect 14 0 15 1;
 #X connect 15 0 0 1;
 #X connect 15 0 2 1;
-#X restore 488 547 pd stereopan;
-#N canvas 65 81 1301 687 controller 0;
+#X restore 433 412 pd stereopan;
+#N canvas 65 85 1301 687 controller 0;
 #X obj 123 362 s stereo_pan;
 #X obj 127 326 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 6350 1;
@@ -112,8 +116,10 @@
 -1 -1 0 1;
 #X text 1142 297 [0-1];
 #X msg 970 291 1;
-#X msg 954 121 0;
-#X obj 954 155 s effect_id;
+#X msg 960 169 0;
+#X obj 960 203 s effect_id;
+#X msg 1060 101 0;
+#X obj 1060 135 s synth_id;
 #X connect 1 0 0 0;
 #X connect 1 0 20 0;
 #X connect 2 0 25 0;
@@ -124,6 +130,7 @@
 #X connect 2 0 31 0;
 #X connect 2 0 27 0;
 #X connect 2 0 32 0;
+#X connect 2 0 34 0;
 #X connect 3 0 5 0;
 #X connect 5 0 4 0;
 #X connect 5 0 21 0;
@@ -141,6 +148,7 @@
 #X connect 29 0 28 0;
 #X connect 31 0 26 0;
 #X connect 32 0 33 0;
+#X connect 34 0 35 0;
 #X restore 36 42 pd controller;
 #X text 35 17 Self-intializing patches;
 #X text 31 163 Effect patches;
@@ -178,7 +186,7 @@
 #X connect 12 0 6 0;
 #X connect 13 0 12 1;
 #X restore 473 94 pd loadtable;
-#X text 23 541 Utilities;
+#X text 866 481 Utilities;
 #X obj 422 246 tabread~ current;
 #N canvas 65 53 1301 715 loadtable 0;
 #X obj 576 104 soundfiler;
@@ -205,19 +213,15 @@
 #X connect 8 0 2 0;
 #X connect 9 0 10 0;
 #X connect 10 0 4 0;
-#X restore 26 565 pd loadtable;
-#X obj 473 48 openpanel;
-#X obj 473 12 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X restore 869 505 pd loadtable;
 #X obj 555 15 r track_no;
-#X msg 555 57 symbol clip/\$1.wav;
 #X obj 344 51 s start;
 #X obj 344 20 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 280 73 0 to pause \, 1 to play;
 #X obj 562 130 r playback_pos;
 #X obj 556 206 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 265 1;
+-1 -1 0 1;
 #N canvas 65 53 1301 715 visualize_playback 0;
 #X obj 484 156 snapshot~;
 #X obj 484 86 loadbang;
@@ -748,7 +752,7 @@ so the recirculation gain is limited to 0.5.;
 #X connect 7 0 4 0;
 #X connect 7 0 5 0;
 #X connect 7 0 6 0;
-#X restore 366 346 pd effect_patches;
+#X restore 311 323 pd effect_patches;
 #X text 30 242 Synthesis patches;
 #N canvas 65 53 1301 715 earplug 0;
 #X msg 442 207 0 \, 360 5000;
@@ -784,8 +788,8 @@ so the recirculation gain is limited to 0.5.;
 #X connect 14 0 5 0;
 #X connect 15 0 17 0;
 #X connect 16 0 17 1;
-#X restore 27 513 pd earplug;
-#X text 23 487 Binaural;
+#X restore 870 453 pd earplug;
+#X text 866 427 Binaural;
 #N canvas 65 53 1301 715 normal 0;
 #X obj 200 81 inlet~;
 #X obj 199 137 outlet~;
@@ -799,7 +803,38 @@ so the recirculation gain is limited to 0.5.;
 #X connect 4 0 2 0;
 #X connect 5 0 2 0;
 #X connect 6 0 5 0;
-#X restore 529 344 pd normal;
+#X restore 490 331 pd normal;
+#X text 870 537 Examples;
+#N canvas 65 53 1301 715 sending_list 0;
+#X msg 597 248 list mother 1 1 2;
+#X obj 606 303 s mari;
+#X obj 532 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 467 279 r mari;
+#X obj 480 341 print;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X restore 868 563 pd sending_list;
+#X obj 1009 139 s effect_id;
+#X msg 1012 79 4;
+#X msg 1079 82 0;
+#X obj 1013 222 s synth_id;
+#X msg 1013 177 0;
+#X obj 1030 329 metro 100;
+#X obj 1030 362 tabwrite~ normal;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array normal 100 float 5;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 100 -1 200 140 1;
+#X restore 1033 430 graph;
+#X obj 1030 298 loadbang;
+#X text 1010 34 Master control;
+#X msg 1063 175 3;
+#X msg 555 57 symbol \$1.wav;
 #N canvas 65 53 1301 715 effect_patches 0;
 #N canvas 65 53 1301 715 vibrato 0;
 #X obj 448 412 vd~ vibrato;
@@ -824,8 +859,9 @@ so the recirculation gain is limited to 0.5.;
 #X obj 448 506 outlet~;
 #X obj 447 119 r vibrato_freq;
 #X obj 559 196 r vibrato_delay;
-#X obj 884 112 switch~;
-#X obj 884 79 r vibrato_toggle;
+#X obj 898 223 switch~;
+#X obj 898 138 r effect_id;
+#X obj 898 176 == 1;
 #X connect 0 0 16 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 1;
@@ -841,7 +877,8 @@ so the recirculation gain is limited to 0.5.;
 #X connect 15 0 4 0;
 #X connect 17 0 6 0;
 #X connect 18 0 2 0;
-#X connect 20 0 19 0;
+#X connect 20 0 21 0;
+#X connect 21 0 19 0;
 #X restore 115 238 pd vibrato;
 #N canvas 65 53 1301 715 tremolo 0;
 #X obj 241 80 osc~;
@@ -876,8 +913,9 @@ so the recirculation gain is limited to 0.5.;
 #X obj 241 20 r tremolo_freq;
 #X obj 296 90 r tremolo_gain;
 #X obj 311 240 r tremolo_depth;
-#X obj 1036 73 r tremolo_toggle;
-#X obj 1037 115 switch~;
+#X obj 898 223 switch~;
+#X obj 898 138 r effect_id;
+#X obj 898 176 == 2;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 14 0;
@@ -895,7 +933,8 @@ so the recirculation gain is limited to 0.5.;
 #X connect 26 0 5 0;
 #X connect 27 0 4 0;
 #X connect 28 0 16 0;
-#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 29 0;
 #X restore 204 238 pd tremolo;
 #N canvas 65 53 1301 715 delay 0;
 #X obj 125 12 inlet~;
@@ -903,20 +942,22 @@ so the recirculation gain is limited to 0.5.;
 #X obj 152 37 delwrite~ echo1 500;
 #X obj 304 146 r delay_length;
 #X obj 267 182 delread~ echo1;
-#X obj 372 23 r delay_toggle;
-#X obj 372 57 switch~;
 #X obj 298 105 *~;
 #X obj 499 24 r delay_feedback;
 #X obj 502 66 hsl 128 15 0 0.8 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 9525 1;
+#X obj 898 223 switch~;
+#X obj 898 138 r effect_id;
+#X obj 898 176 == 3;
 #X connect 0 0 2 0;
 #X connect 3 0 4 0;
 #X connect 4 0 1 0;
-#X connect 4 0 7 0;
-#X connect 5 0 6 0;
-#X connect 7 0 2 0;
-#X connect 8 0 9 0;
-#X connect 9 0 7 1;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 1;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
 #X restore 300 239 pd delay;
 #N canvas 65 53 1301 715 whaauto 0;
 #X obj 417 493 vcf~;
@@ -937,7 +978,7 @@ so the recirculation gain is limited to 0.5.;
 #X obj 437 290 +~ 200;
 #X obj 436 208 *~ 1500;
 #X text 534 131 <-- LFO (Low-Frequency Oscillator;
-#X text 718 189 <-- Maximum of the freq. range;
+#X text 725 196 <-- Maximum of the freq. range;
 #X text 672 261 <-- Minimum of the freq. range;
 #X text 545 414 <-- "Q";
 #X text 456 494 <-- Voltage-Controlled band-pass filter;
@@ -947,8 +988,9 @@ so the recirculation gain is limited to 0.5.;
 #X obj 591 163 r wha_maxfreq;
 #X obj 597 231 r wha_minfreq;
 #X obj 585 304 r wha_q;
-#X obj 1108 43 r wha_toggle;
-#X obj 1131 86 switch~;
+#X obj 1015 184 switch~;
+#X obj 1015 99 r effect_id;
+#X obj 1015 137 == 4;
 #X connect 0 0 21 0;
 #X connect 2 0 1 0;
 #X connect 2 0 0 2;
@@ -969,7 +1011,8 @@ so the recirculation gain is limited to 0.5.;
 #X connect 22 0 6 0;
 #X connect 23 0 7 0;
 #X connect 24 0 2 0;
-#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 25 0;
 #X restore 387 239 pd whaauto;
 #N canvas 65 53 1301 715 distortion 0;
 #X obj 426 136 inlet~;
@@ -979,8 +1022,9 @@ so the recirculation gain is limited to 0.5.;
 #X obj 498 193 * -1;
 #X obj 441 200 *~;
 #X obj 502 120 r distortion_gain;
-#X obj 976 87 r distortion_toggle;
-#X obj 976 128 switch~;
+#X obj 898 223 switch~;
+#X obj 898 138 r effect_id;
+#X obj 898 176 == 5;
 #X connect 0 0 5 0;
 #X connect 1 0 2 0;
 #X connect 3 0 1 2;
@@ -988,7 +1032,8 @@ so the recirculation gain is limited to 0.5.;
 #X connect 4 0 1 1;
 #X connect 5 0 1 0;
 #X connect 6 0 5 1;
-#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
 #X restore 475 239 pd distortion;
 #N canvas 65 53 1301 715 phaser 0;
 #X obj 500 15 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
@@ -1030,8 +1075,9 @@ so the recirculation gain is limited to 0.5.;
 #X obj 496 -20 r phaser_speed;
 #X obj 504 85 r phaser_depth;
 #X obj 633 200 r phaser_feedback;
-#X obj 993 42 r phaser_toggle;
-#X obj 988 76 switch~;
+#X obj 898 223 switch~;
+#X obj 898 138 r effect_id;
+#X obj 898 176 == 6;
 #X connect 0 0 8 0;
 #X connect 0 0 24 0;
 #X connect 1 0 2 0;
@@ -1065,7 +1111,8 @@ so the recirculation gain is limited to 0.5.;
 #X connect 33 0 0 0;
 #X connect 34 0 12 0;
 #X connect 35 0 17 0;
-#X connect 36 0 37 0;
+#X connect 37 0 38 0;
+#X connect 38 0 36 0;
 #X restore 588 239 pd phaser;
 #N canvas 65 53 1301 715 reverb 0;
 #X obj 13 19 inlet~;
@@ -1086,7 +1133,6 @@ so the recirculation gain is limited to 0.5.;
 #X obj 282 473 *~ 0;
 #X obj 237 472 *~ 0;
 #X obj 365 475 *~ 0;
-#X obj 632 365 inlet;
 #X obj 632 437 / 200;
 #X obj 632 389 min 100;
 #X obj 632 412 max 0;
@@ -1118,11 +1164,13 @@ so the recirculation gain is limited to 0.5.;
 #X text 708 381 0 to 100 to control reverb;
 #X text 719 396 time.;
 #X text 691 364 feedback gain on a scale of;
-#X obj 974 84 r reverb_;
-#X obj 976 123 switch~;
+#X obj 584 345 r reverb_gain;
+#X obj 898 223 switch~;
+#X obj 898 138 r effect_id;
+#X obj 898 176 == 7;
 #X connect 0 0 1 0;
-#X connect 1 0 30 0;
-#X connect 1 1 30 1;
+#X connect 1 0 29 0;
+#X connect 1 1 29 1;
 #X connect 2 0 4 0;
 #X connect 2 0 6 0;
 #X connect 2 0 8 0;
@@ -1141,37 +1189,38 @@ so the recirculation gain is limited to 0.5.;
 #X connect 11 0 15 0;
 #X connect 12 0 14 0;
 #X connect 13 0 17 0;
-#X connect 14 0 29 0;
-#X connect 15 0 23 0;
-#X connect 16 0 22 0;
-#X connect 17 0 24 0;
-#X connect 18 0 20 0;
-#X connect 19 0 17 1;
-#X connect 19 0 16 1;
-#X connect 19 0 15 1;
-#X connect 19 0 14 1;
-#X connect 20 0 21 0;
-#X connect 21 0 19 0;
-#X connect 25 0 2 1;
-#X connect 26 0 3 1;
-#X connect 27 0 7 1;
-#X connect 27 0 9 1;
-#X connect 28 0 7 0;
-#X connect 28 0 9 0;
+#X connect 14 0 28 0;
+#X connect 15 0 22 0;
+#X connect 16 0 21 0;
+#X connect 17 0 23 0;
+#X connect 18 0 17 1;
+#X connect 18 0 16 1;
+#X connect 18 0 15 1;
+#X connect 18 0 14 1;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;
+#X connect 24 0 2 1;
+#X connect 25 0 3 1;
+#X connect 26 0 7 1;
+#X connect 26 0 9 1;
+#X connect 27 0 7 0;
+#X connect 27 0 9 0;
+#X connect 29 0 30 0;
+#X connect 29 1 30 1;
 #X connect 30 0 31 0;
 #X connect 30 1 31 1;
 #X connect 31 0 32 0;
 #X connect 31 1 32 1;
 #X connect 32 0 33 0;
 #X connect 32 1 33 1;
-#X connect 33 0 34 0;
-#X connect 33 1 34 1;
-#X connect 34 0 2 0;
-#X connect 34 1 3 0;
-#X connect 46 0 47 0;
+#X connect 33 0 2 0;
+#X connect 33 1 3 0;
+#X connect 45 0 19 0;
+#X connect 47 0 48 0;
+#X connect 48 0 46 0;
 #X restore 694 239 pd reverb;
 #X obj 413 28 inlet~;
-#X obj 413 463 outlet~;
+#X obj 413 463 outlet~, f 18;
 #X connect 0 0 8 0;
 #X connect 1 0 8 0;
 #X connect 2 0 8 0;
@@ -1179,6 +1228,7 @@ so the recirculation gain is limited to 0.5.;
 #X connect 4 0 8 0;
 #X connect 5 0 8 0;
 #X connect 6 0 8 0;
+#X connect 6 1 8 0;
 #X connect 7 0 0 0;
 #X connect 7 0 1 0;
 #X connect 7 0 2 0;
@@ -1186,23 +1236,7 @@ so the recirculation gain is limited to 0.5.;
 #X connect 7 0 4 0;
 #X connect 7 0 5 0;
 #X connect 7 0 6 0;
-#X restore 32 192 pd effect_patches;
-#X text 27 597 Examples;
-#N canvas 65 53 1301 715 sending_list 0;
-#X msg 597 248 list mother 1 1 2;
-#X obj 606 303 s mari;
-#X obj 532 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 467 279 r mari;
-#X obj 480 341 print;
-#X connect 0 0 1 0;
-#X connect 2 0 0 0;
-#X connect 3 0 4 0;
-#X restore 25 623 pd sending_list;
-#X obj 1009 139 s effect_id;
-#X msg 1012 79 4;
-#X msg 1079 82 0;
-#X obj 1013 222 s synth_id;
+#X restore 31 194 pd effect_patches;
 #N canvas 65 53 1301 715 synth_patches 0;
 #N canvas 65 53 1301 715 ring_modulation 0;
 #X obj 522 163 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
@@ -1231,8 +1265,7 @@ so the recirculation gain is limited to 0.5.;
 #X connect 10 0 3 0;
 #X connect 11 0 8 0;
 #X connect 12 0 0 0;
-#X restore 145 261 pd ring_modulation;
-#X obj 306 147 inlet~;
+#X restore 286 258 pd ring_modulation;
 #X obj 480 468 outlet~;
 #N canvas 65 53 1301 715 am_modulation 0;
 #X obj 522 165 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
@@ -1261,7 +1294,7 @@ so the recirculation gain is limited to 0.5.;
 #X connect 10 0 9 0;
 #X connect 11 0 4 0;
 #X connect 12 0 0 0;
-#X restore 312 262 pd am_modulation;
+#X restore 453 259 pd am_modulation;
 #N canvas 65 53 1301 715 fm_modulation 0;
 #X obj 480 113 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -1293,56 +1326,58 @@ so the recirculation gain is limited to 0.5.;
 #X connect 12 0 5 0;
 #X connect 13 0 14 1;
 #X connect 14 0 12 1;
-#X restore 448 265 pd fm_modulation;
-#X connect 0 0 2 0;
-#X connect 3 0 2 0;
-#X connect 4 0 2 0;
-#X restore 620 344 pd synth_patches;
-#X msg 1013 177 0;
-#X obj 629 261 metro 100;
-#X obj 629 294 tabwrite~ normal;
-#N canvas 0 50 450 250 (subpatch) 0;
-#X array normal 100 float 5;
-#A 0 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318 0.101318
-0.101318 0.101318 0.101318 0.101318 0.101318;
-#X coords 0 1 100 -1 200 140 1;
-#X restore 712 132 graph;
-#X obj 629 230 loadbang;
-#X text 1010 34 Master control;
-#X msg 1063 175 3;
+#X restore 589 262 pd fm_modulation;
 #X connect 0 0 1 0;
-#X connect 0 0 19 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X restore 31 289 pd synth_patches;
+#N canvas 65 53 1301 715 violin_synth 0;
+#X obj 551 242 mtof;
+#X obj 409 276 vline~;
+#X obj 473 424 dac~;
+#X obj 551 277 osc~ 220;
+#X obj 472 340 *~;
+#X msg 409 246 \$1 100 \, 0 500 100;
+#X obj 611 173 r note;
+#X obj 320 175 r velocity;
+#X obj 473 377 *~ 20;
+#X msg 431 173 0.5;
+#X msg 515 169 58;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 8 0;
+#X connect 5 0 1 0;
+#X connect 6 0 0 0;
+#X connect 7 0 5 0;
+#X connect 8 0 2 0;
+#X connect 8 0 2 1;
+#X connect 9 0 5 0;
+#X connect 10 0 0 0;
+#X restore 29 320 pd violin_synth;
+#X obj 27 388 ks-synth;
+#X obj 33 585 dac~;
+#X obj 27 355 r karplus_note;
+#X connect 0 0 1 0;
+#X connect 0 0 16 0;
 #X connect 1 0 8 0;
 #X connect 6 0 0 0;
 #X connect 6 1 1 1;
-#X connect 8 0 21 0;
-#X connect 8 0 36 0;
-#X connect 8 0 33 0;
-#X connect 8 0 25 0;
-#X connect 10 0 6 0;
-#X connect 11 0 10 0;
-#X connect 12 0 13 0;
-#X connect 13 0 6 0;
-#X connect 15 0 14 0;
-#X connect 17 0 0 1;
-#X connect 19 0 18 0;
-#X connect 21 0 2 0;
-#X connect 25 0 2 0;
-#X connect 30 0 29 0;
-#X connect 31 0 29 0;
-#X connect 33 0 2 0;
-#X connect 34 0 32 0;
-#X connect 35 0 36 0;
-#X connect 38 0 35 0;
-#X connect 40 0 32 0;
+#X connect 8 0 18 0;
+#X connect 8 0 22 0;
+#X connect 10 0 36 0;
+#X connect 12 0 11 0;
+#X connect 14 0 0 1;
+#X connect 16 0 15 0;
+#X connect 18 0 2 0;
+#X connect 22 0 2 0;
+#X connect 26 0 25 0;
+#X connect 27 0 25 0;
+#X connect 29 0 28 0;
+#X connect 30 0 31 0;
+#X connect 33 0 30 0;
+#X connect 35 0 28 0;
+#X connect 36 0 6 0;
+#X connect 40 0 41 0;
+#X connect 40 0 41 1;
+#X connect 42 0 40 0;

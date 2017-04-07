@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
 
 public class GameActivity extends AppCompatActivity {
@@ -16,6 +18,7 @@ public class GameActivity extends AppCompatActivity {
     Toolbar _toolbar;
     Button _button1, _button2, _button3, _button4, _button5, _button6;
     Button _buttonC, _buttonD, _buttonE, _buttonF, _buttonG;
+    CheckBox _checkBox;
 
     private  void initGUI() {
         _toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -95,6 +98,20 @@ public class GameActivity extends AppCompatActivity {
         _buttonG.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 //Do stuff here
+            }
+        });
+
+        _checkBox = (CheckBox) findViewById(R.id.checkBox);
+        _checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if ( isChecked )
+                {
+                    // perform logic
+                }
+
             }
         });
     }
